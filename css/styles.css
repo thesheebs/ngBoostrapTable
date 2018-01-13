@@ -1,0 +1,46 @@
+#ng {
+  color: #fff; }
+
+h1:first-child {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #de0032;
+  background: #de0032;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #de0032 0%, #c3002f 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, top top, top bottom, color-stop(0%, #de0032), color-stop(100%, #c3002f));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #de0032 0%, #c3002f 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #de0032 0%, #c3002f 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #de0032 0%, #c3002f 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #de0032 0%, #c3002f 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+  color: #fff;
+  margin: 0; }
+
+tr:nth-child(2n) {
+  background-color: #fafafa; }
+
+thead {
+  background-color: #fafafa; }
+
+th:nth-child(3) button {
+  width: 120px; }
+
+footer {
+  background-color: #333;
+  padding: 30px 0; }
+
+.sortorder:after {
+  content: '\25b2'; }
+
+.sortorder.reverse:after {
+  content: '\25bc'; }
+
+/*# sourceMappingURL=styles.css.map */

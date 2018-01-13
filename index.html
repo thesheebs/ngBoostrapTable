@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- ionicons -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- main.css -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+    <title>Angular Table App</title>
+  </head>
+
+  <body>
+    <h1>
+      <i class="icon ion-social-angular-outline" id="ng"></i>
+      Angular Table Application
+    </h1>
+
+    <!-- Angular Table App -->
+    <section id="table">
+      <div ng-app="tableApp" ng-controller="tableCtrl" class="container">
+        <h2 class="text-center py-5">Order By Button</h2>
+        <pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"id="name">
+                <button type="button" class="btn btn-dark"
+                 ng-click="sortBy('Name')">Name <span class="sortorder" ng-show="propertyName === 'Name'" ng-class="{reverse: reverse}"></span></button>
+
+              </th>
+              <th scope="col"id="city">
+                <button type="button" class="btn btn-dark" ng-click="sortBy('City')">City <span class="sortorder" ng-show="propertyName === 'City'" ng-class="{reverse: reverse}"></span></button>
+              </th>
+              <th scope="col"id="country">
+                <button type="button" class="btn btn-dark" ng-click="sortBy('Country')">Country <span class="sortorder" ng-show="propertyName === 'Country'" ng-class="{reverse: reverse}"></span></button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='x in names | orderBy:propertyName:reverse'>
+              <td>{{ x.Name }}</td>
+              <td>{{ x.City }}</td>
+              <td>{{ x.Country }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="text-muted py-0 my-0">Table Data from w3schools myData.php</p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
